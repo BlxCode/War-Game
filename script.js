@@ -1,0 +1,1 @@
+await window.CrazyGames.SDK.init();
