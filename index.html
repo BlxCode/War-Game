@@ -4,9 +4,9 @@
 <head>
     <style>
         #Start {
-user-select:none;
--webkit-user-select: none;
-        
+            user-select: none;
+            -webkit-user-select: none;
+
             text-align: center;
             margin-top: 10%;
             margin-left: 30%;
@@ -14,14 +14,15 @@ user-select:none;
             margin-bottom: 10%;
             vertical-align: middle;
         }
-        button{
-            background-color:darkgrey;
-            border-style:solid;
-            border-radius:10px;
-            padding:10px;
-            margin-bottom:5px;
-            cursor:pointer;
-            
+
+        button {
+            background-color: darkgrey;
+            border-style: solid;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+
         }
     </style>
 
@@ -42,24 +43,25 @@ user-select:none;
         <br>
         <button>Play Two Player</button>
         <br>
-       <span>Font Awesome by Dave Gandy - <a href="http://fontawesome.com">https://fontawesome.com</a>
-       </span>   </div>
- 
+        <span>Font Awesome by Dave Gandy - <a href="http://fontawesome.com">https://fontawesome.com</a>
+        </span>
+    </div>
+
 
 
     <script>
-//Screen lock api
-const requestWakeLock = async () => {
-    try {
-    const wakeLock = await navigator.wakeLock.request("screen");
-  } catch (err) {
-    // The wake lock request fails - usually system-related, such as low battery.
+        //Screen lock api
+        const requestWakeLock = async () => {
+            try {
+                const wakeLock = await navigator.wakeLock.request("screen");
+            } catch (err) {
+                // The wake lock request fails - usually system-related, such as low battery.
 
-    console.log(`${err.name}, ${err.message}`);
-  }
-};
+                console.log(`${err.name}, ${err.message}`);
+            }
+        };
 
-requestWakeLock();
+        requestWakeLock();
 
 
     </script>
