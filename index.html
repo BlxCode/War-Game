@@ -17,6 +17,7 @@
             border-radius:10px;
             padding:10px;
             margin-bottom:5px;
+            cursor:poniter;
             
         }
     </style>
@@ -43,7 +44,22 @@
  
 
 
-    <script></script>
+    <script>
+//Screen lock api
+const requestWakeLock = async () => {
+    try {
+    const wakeLock = await navigator.wakeLock.request("screen");
+  } catch (err) {
+    // The wake lock request fails - usually system-related, such as low battery.
+
+    console.log(`${err.name}, ${err.message}`);
+  }
+};
+
+requestWakeLock();
+
+
+    </script>
 </body>
 
 </html>
