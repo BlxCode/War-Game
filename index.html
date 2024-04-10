@@ -40,7 +40,6 @@ b{
 
         }
     </style>
-
     <script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
     <meta charset="UTF-8">
     <meta name="description" content="War card game.">
@@ -50,7 +49,6 @@ b{
     <link rel="stylesheet" href="styles.css">
     <title>Card Games: War</title>
 </head>
-
 <body>
     <div id="Start">
         <h1>Card Games: War</h1>
@@ -61,9 +59,6 @@ b{
         <span>Font Awesome by Dave Gandy - <a href="http://fontawesome.com">https://fontawesome.com</a>
         </span>
     </div>
-
-
-
     <script>
         //Screen lock api
         const requestWakeLock = async () => {
@@ -71,15 +66,11 @@ b{
                 const wakeLock = await navigator.wakeLock.request("screen");
             } catch (err) {
                 // The wake lock request fails - usually system-related, such as low battery.
-
                 console.log(`${err.name}, ${err.message}`);
             }
         };
-
         requestWakeLock();
-
-
+        conosle.log("gyat");
     </script>
 </body>
-
 </html>
