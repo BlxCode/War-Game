@@ -14,9 +14,24 @@
             margin-bottom: 10%;
             vertical-align: middle;
         }
-
+button:hover{
+ 
+    background-color:khaki;
+    
+}
+button:active{
+    transform:scale(0.95);
+}
+b{
+    font-weight:900;
+}
         button {
-            background-color: darkgrey;
+            background-color: rgb(177, 196, 166);
+            -webkit-text-stroke-color: aliceblue;
+            -webkit-text-stroke-width:0.25vw;
+            font-weight:800;
+            font-size:5vw;
+            color:rgb(22, 29, 29);
             border-style: solid;
             border-radius: 10px;
             padding: 10px;
@@ -39,9 +54,9 @@
 <body>
     <div id="Start">
         <h1>Card Games: War</h1>
-        <button>Play</button>
+        <button title="Play single player">Play</button>
         <br>
-        <button>Play Two Player</button>
+        <button title="Play two player on same device" style="font-size:3vw; -webkit-text-stroke-width:0.125vw;">Play Two Player</button>
         <br>
         <span>Font Awesome by Dave Gandy - <a href="http://fontawesome.com">https://fontawesome.com</a>
         </span>
