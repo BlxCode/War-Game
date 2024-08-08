@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    font-family: "Varela Round", sans-serif !important;
+}
 h1{
     font-size:50px;
+    font-family: "Varela Round", sans-serif !important;
 }
+
 #Start {
 background-image:url("/Casio.jpg");
     user-select: none;
     -webkit-user-select: none;
     text-align: center;
     margin-top: 20%;
+    font-family: "Varela Round", sans-serif !important;
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 20%;
@@ -28,7 +34,7 @@ button {
     -webkit-text-stroke-width:0.25px;
     font-weight:900;
     font-size:35px;
-    font-family: "Varela Round", sans-serif;
+ 
     color:rgb(22, 29, 29);
     border-style: solid;
     border-radius: 10px;
