@@ -34,11 +34,17 @@ button {
     -webkit-text-stroke-width:0.25px;
     font-weight:900;
     font-size:35px;
- 
+    font-family: "Varela Round", sans-serif !important;
     color:rgb(22, 29, 29);
     border-style: solid;
     border-radius: 10px;
     padding: 15px;
     margin-bottom: 5px;
     cursor: pointer;
+}
+#coins{
+    position:fixed;
+    top:0px;
+    right:0px;
+    margin:10px;
 }
