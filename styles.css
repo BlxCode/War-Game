@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 h1{
     font-size:50px;
 }
@@ -23,11 +24,11 @@ font-weight:900;
 }
 button {
     background-color: rgb(195, 216, 225);
-    -webkit-text-stroke-color: aliceblue;
-    -webkit-text-stroke-width:0.25vw;
-    font-weight:800;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width:0.25px;
+    font-weight:900;
     font-size:35px;
-  
+    font-family: "Varela Round", sans-serif;
     color:rgb(22, 29, 29);
     border-style: solid;
     border-radius: 10px;
