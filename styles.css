@@ -1,14 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 body{
     font-family: "Varela Round", sans-serif !important;
+    color:white;
+    background-color:white;
+
+    
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
 }
 h1{
     font-size:50px;
+}
+h2{
+    font-size:37.5px;
+    text-align:center;
+}
+h1,h2,h3,h4,h5,h6,p{
+    
     font-family: "Varela Round", sans-serif !important;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width:1.5px;
 }
 
 #Start {
-background-image:url("/assets/Casino.jpg");
+background-color:white;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width:0.25px;
     user-select: none;
     -webkit-user-select: none;
     text-align: center;
@@ -21,6 +39,7 @@ background-image:url("/assets/Casino.jpg");
 }
 button:hover{
 background-color:khaki;
+transform:scale(1.05)
 }
 button:active{
 transform:scale(0.95);
@@ -28,17 +47,21 @@ transform:scale(0.95);
 b{
 font-weight:900;
 }
+
 button {
+   
     background-color: rgb(195, 216, 225);
     -webkit-text-stroke-color: rgb(0, 0, 0);
-    -webkit-text-stroke-width:0.25px;
+    -webkit-text-stroke-width:1px;
     font-weight:900;
     font-size:35px;
     font-family: "Varela Round", sans-serif !important;
-    color:rgb(22, 29, 29);
+    color:rgb(255, 255, 255);
     border-style: solid;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
+    padding-left:35px;
+    padding-right:35px;
     margin-bottom: 5px;
     cursor: pointer;
 }
@@ -46,7 +69,25 @@ button {
     position:fixed;
     top:0px;
     right:0px;
-    margin:10px;
+   cursor:pointer;
+    margin-right:10px;
+    margin-top:30px;
     -webkit-text-stroke-color:black;
     -webkit-text-stroke-width:1px;
+}
+#shop{
+    position:fixed;
+    right:55px;
+    top:50px;
+    display:none;
+    z-index:1;
+    background-color:chocolate;
+    width:70%;
+    height:70%;
+    padding:10px;
+  border-radius:10px;
+  border-style:solid;
+  border-width:5px;
+  border-color:black;
+  
 }

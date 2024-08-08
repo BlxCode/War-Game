@@ -15,13 +15,22 @@
     <title>Card Games: War</title>
 </head>
 <body>
-    <i id="coins" class="fa-solid fa-coins fa-2xs" style="color: #FFD43B;"></i>
+    <i id="coins" class="fa-solid fa-coins fa-2xl" style="color: #FFD43B;" title="Buy More Coins"> 100</i>
+    <div id="shop">
+      <h2>Shop</h2>
+      <label for="ad" style="color:rgb(235, 255, 249); font-size:25px;">Watch Ad for 25 Coins</label>
+      <br>
+      <button id="25Coinad" style="font-size:30px;-webkit-text-stroke-width:0px; color:black;">
+      <i id="ad" class="fa-solid fa-film"></i>
+      Watch
+    </button>
+    </div>
     <div id="Start">
    
         <h1>Card Games: War</h1>
-        <button title="Play single player">Singleplayer</button>
+        <button title="Play single player">Play</button>
         <br>
-        <button title="Play two player on same device" style="font-size:24px;;">Two Player</button>
+        
         <br>
         <div id="credits">
         <span>Font Awesome by Dave Gandy - <a href="http://fontawesome.com">https://fontawesome.com</a>
@@ -42,7 +51,22 @@
       var RetrieveCrazygamesSDK = async () =>{
         await window.CrazyGames.SDK.init();
       }
-
+var coins = document.getElementById("coins");
+coins.addEventListener("mouseover",()=>{
+  coins.className="fa-solid fa-cart-shopping fa-2xl";
+  coins.style.color="rgb(200,100,10)"
+});
+coins.addEventListener("mouseout",()=>{
+  coins.className="fa-solid fa-coins fa-2xl";
+  coins.style.color="#FFD43B";
+});
+coins.addEventListener("click",()=>{
+if(document.getElementById("shop").style.display=="none"){
+  document.getElementById("shop").style.display="block";
+}else{
+  document.getElementById("shop").style.display="none";
+}
+});
     </script>
 </body>
 </html>
