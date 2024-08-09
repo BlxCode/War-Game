@@ -1,2 +1,4 @@
 # War-Game
-A working game of war.
+## About
+A test card game war with CrazyGames' sdk
+🎮🤫🧏
