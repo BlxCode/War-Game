@@ -24,6 +24,7 @@
       <i id="ad" class="fa-solid fa-film"></i>
       Watch
     </button>
+    <p style="float:right; color:white !important;">What are Coins? <br> Coins are used for upgrades to defeat your enemy! <br>Example: Buy extra Jokers</p>
     </div>
     <div id="Start">
    
@@ -37,7 +38,10 @@
         </span><br>
         <span>Background by <a href="https://pixabay.com/users/djedj-59194/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3260372">djedj</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3260372">Pixabay</a></span>
       <br> <span> Playing cards by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=161536">OpenClipart-Vectors</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=161536">Pixabay</a> </span></div>
-    </div>   <script>
+    </div>  
+    
+    <script>
+
         //Screen lock api
         const requestWakeLock = async () => {
             try {
@@ -48,9 +52,11 @@
             }
         };
         requestWakeLock();
-      var RetrieveCrazygamesSDK = async () =>{
+     async function initialize() {
         await window.CrazyGames.SDK.init();
       }
+      initialize();
+      
 var coins = document.getElementById("coins");
 coins.addEventListener("mouseover",()=>{
   coins.className="fa-solid fa-cart-shopping fa-2xl";
@@ -67,6 +73,16 @@ if(document.getElementById("shop").style.display=="none"){
   document.getElementById("shop").style.display="none";
 }
 });
+var ad = document.getElementById("25Coinad");
+ad.addEventListener("click",()=>{
+  const callbacks = {
+  adFinished: () => coins.textContent=Number(coins.textContent)+25,
+  adError: (error) => console.log("Error rewarded ad", error),
+  adStarted: () => console.log("Start rewarded ad"),
+};
+window.CrazyGames.SDK.ad.requestAd("rewarded", callbacks);
+})
+
     </script>
 </body>
 </html>
