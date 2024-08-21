@@ -1,23 +1,192 @@
-MIT License
+<!DOCTYPE html>
+<html>
 
-Copyright (c) 2024 BlxCode
+<head>
+    <script src="https://kit.fontawesome.com/d2a23fcf0d.js" crossorigin="anonymous"></script>
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+   
+    <script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+    <meta charset="UTF-8">
+    <meta name="description" content="War card game.">
+    <meta name="keywords" content="War, Card, Game, Card game,">
+    <meta name="author" content="Blxm">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    font-family: "Varela Round", sans-serif !important;
+    color:white;
+    background-color:white;
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+    
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+}
+h1{
+    font-size:50px;
+}
+h2{
+    font-size:37.5px;
+    text-align:center;
+}
+h1,h2,h3,h4,h5,h6,p{
+    
+    font-family: "Varela Round", sans-serif !important;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width:1.5px;
+}
 
-THE SOFTWARE IS PROVIDED TO YOU ONLY AFTER GIVING CREDIT TO THE ORIGINAL AUTHORS
+#Start {
+background-color:white;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width:0.25px;
+    user-select: none;
+    -webkit-user-select: none;
+    text-align: center;
+    margin-top: 20%;
+    font-family: "Varela Round", sans-serif !important;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20%;
+    vertical-align: middle;
+}
+button:hover{
+background-color:khaki;
+transform:scale(1.05)
+}
+button:active{
+transform:scale(0.95);
+}
+b{
+font-weight:900;
+}
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+button {
+   
+    background-color: rgb(195, 216, 225);
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width:1px;
+    font-weight:900;
+    font-size:35px;
+    font-family: "Varela Round", sans-serif !important;
+    color:rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px;
+    padding: 20px;
+    padding-left:35px;
+    padding-right:35px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+#coins{
+    position:fixed;
+    top:0px;
+    right:0px;
+   cursor:pointer;
+    margin-right:10px;
+    margin-top:30px;
+    -webkit-text-stroke-color:black;
+    -webkit-text-stroke-width:1px;
+}
+#shop{
+    position:fixed;
+    right:55px;
+    top:50px;
+    display:none;
+    z-index:1;
+    background-color:chocolate;
+    width:70%;
+    height:70%;
+    padding:10px;
+  border-radius:10px;
+  border-style:solid;
+  border-width:5px;
+  border-color:black;
+  
+}
+.UpgradeCard{
+    width:100px;
+    height:150px;
+    border-radius:10px;
+    
+}
+    </style>
+    <title>Card Games: War</title>
+</head>
+<body>
+    <i id="coins" class="fa-solid fa-coins fa-2xl" style="color: #FFD43B;" title="Buy More Coins"> 100</i>
+    <div id="shop">
+      <h2>Shop</h2>
+      <label for="ad" style="color:rgb(235, 255, 249); font-size:25px;">Watch Ad for 25 Coins</label>
+      <br>
+      <button id="25Coinad" style="font-size:30px;-webkit-text-stroke-width:0px; color:black;">
+      <i id="ad" class="fa-solid fa-film"></i>
+      Watch
+    </button>
+    <p style="float:right; color:white !important;">What are Coins? <br> Coins are used for upgrades to defeat your enemy! <br>Example: Buy extra Jokers</p>
+    </div>
+    <div id='GameDIV' style="display:none;">
+        
+        <div id="UpgradesDiV"><div class="UpgradeCard">hi</div></div>
+    </div>
+    <div id="Start">
+   
+        <h1>Card Games: War</h1>
+        <button id="start" title="Play single player">Play</button>
+        <br>
+        
+        <br>
+        <div id="credits">
+        <span>Font Awesome by Dave Gandy - <a href="http://fontawesome.com">https://fontawesome.com</a>
+        </span><br>
+        <span>Background by <a href="https://pixabay.com/users/djedj-59194/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3260372">djedj</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=3260372">Pixabay</a></span>
+      <br> <span> Playing cards by <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=161536">OpenClipart-Vectors</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=161536">Pixabay</a> </span></div>
+    </div>  
+    
+    <script>
+
+        //Screen lock api
+        const requestWakeLock = async () => {
+            try {
+                const wakeLock = await navigator.wakeLock.request("screen");
+            } catch (err) {
+                // The wake lock request fails - usually system-related, such as low battery.
+                console.log(`${err.name}, ${err.message}`);
+            }
+        };
+        requestWakeLock();
+     async function initialize() {
+        await window.CrazyGames.SDK.init();
+      }
+      initialize();
+      
+var coins = document.getElementById("coins");
+coins.addEventListener("mouseover",()=>{
+  coins.className="fa-solid fa-cart-shopping fa-2xl";
+  coins.style.color="rgb(200,100,10)"
+});
+coins.addEventListener("mouseout",()=>{
+  coins.className="fa-solid fa-coins fa-2xl";
+  coins.style.color="#FFD43B";
+});
+coins.addEventListener("click",()=>{
+if(document.getElementById("shop").style.display=="none"){
+  document.getElementById("shop").style.display="block";
+}else{
+  document.getElementById("shop").style.display="none";
+}
+});
+var ad = document.getElementById("25Coinad");
+ad.addEventListener("click",()=>{
+  const callbacks = {
+  adFinished: () => coins.textContent=Number(coins.textContent)+25,
+  adError: (error) => console.log("Error rewarded ad", error),
+  adStarted: () => console.log("Start rewarded ad"),
+};
+window.CrazyGames.SDK.ad.requestAd("rewarded", callbacks);
+})
+
+    </script>
+</body>
+</html>
